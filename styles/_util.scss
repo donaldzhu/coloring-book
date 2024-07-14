@@ -1,0 +1,34 @@
+@use "sass:meta";
+
+@mixin fullpage-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin import-fonts($family, $font-file-name, $weights...) {
+  @each $weight, $weight-value in meta.keywords($weights) {
+    @font-face {
+      font-family: $family;
+      src: url("./fonts/#{$font-file-name}/#{$font-file-name}-#{$weight}.otf")
+        format("opentype");
+      font-weight: $weight-value;
+      font-style: normal;
+    }
+  }
+
+  @each $weight, $weight-value in meta.keywords($weights) {
+    @font-face {
+      font-family: $family;
+      src: url("./fonts/#{$family}/#{$family}-#{$weight}Italic.otf")
+        format("opentype");
+      font-weight: $weight-value;
+      font-style: italic;
+    }
+  }
+}

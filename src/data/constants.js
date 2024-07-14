@@ -1,0 +1,5 @@
+import { HEIGHT_INCH, MARGIN, WIDTH_INCH } from './config'
+
+export const MARGINS = MARGIN * 2
+export const ASPECT_RATIO = WIDTH_INCH / HEIGHT_INCH
+export const INNER_ASPECT_RATIO = (HEIGHT_INCH - MARGINS) / (WIDTH_INCH - MARGINS) 

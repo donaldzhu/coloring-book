@@ -1,0 +1,8 @@
+@use "util" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  @include fullpage-wrapper();
+}
