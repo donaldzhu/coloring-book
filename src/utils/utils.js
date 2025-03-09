@@ -14,12 +14,13 @@ export const map = (value, inMin, inMax, outMin = 0, outMax = 1) =>
 
 export const cover = (w, h, wToH) => w / h >= wToH ?
   {
-    w: h * wToH,
+    w: Math.floor(h * wToH),
     h,
   } : {
     w,
-    h: w / wToH
+    h: Math.floor(w / wToH)
   }
 
 export const vw = (percentage = 100) => percentage * window.innerWidth / 100
 export const vh = (percentage = 100) => percentage * window.innerHeight / 100
+

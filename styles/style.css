@@ -10,6 +10,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "hanken-grotesk", sans-serif;
+  color: white;
 }
-
-/*# sourceMappingURL=style.css.map */
